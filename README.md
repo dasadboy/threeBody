@@ -9,6 +9,6 @@ Python 3.5+
 ## Required Packages
 [pygame](https://www.pygame.org/wiki/GettingStarted)
 - Used for animations  
-\* Not actually currently in use as animations haven't been implemented \*  
+\* Not actually currently in use as animations haven't been implemented \* 
 [matplotlib](https://matplotlib.org/stable/users/installing.html)  
 - Used for calculations
