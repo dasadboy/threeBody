@@ -1,4 +1,4 @@
-import math, body, pygame, sys, vpython
+import math, body, pygame, sys
 import matplotlib.pyplot as plt
 
 class Simulation:
