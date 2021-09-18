@@ -1,5 +1,3 @@
-import pygame
-
 class Body:
     def __init__(self, name, m, initial_pos, initial_vel, color):
         """
