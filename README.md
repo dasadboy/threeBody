@@ -7,8 +7,8 @@ It was later extended to support the [N-Body Problem](https://en.wikipedia.org/w
 Python 3.5+
 
 ## Required Packages
-[pygame](https://www.pygame.org/wiki/GettingStarted)
-- Used for animations  
-\* Not actually currently in use as animations haven't been implemented \* 
-[matplotlib](https://matplotlib.org/stable/users/installing.html)  
-- Used for calculations
+#### [pygame](https://www.pygame.org/wiki/GettingStarted)
+  - Used for animations  
+\* Not actually currently in use as animations haven't been implemented \*
+#### [matplotlib](https://matplotlib.org/stable/users/installing.html)  
+  - Used for calculations
