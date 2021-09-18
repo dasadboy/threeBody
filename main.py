@@ -30,24 +30,13 @@ while inp != "quit":
     inp = input("calculate points (cp) / animate / plot / help / quit? : ").strip()
     if inp.startswith("calculate points") or inp.startswith("cp"):
         inp = inp.split()
-        if inp[0] == "cp" and len(inp) == 3 or len(inp) == 4:
+        if ((inp[0] == "cp" and len(inp) == 3) or (inp[0] == "calculate" and inp[1] == "points" and len(inp) == 4)):
             try:
                 dur, dt = float(inp[-2]), float(inp[-1])
             except ValueError as e:
                 print(e, "Arguments must be 2 numbers (floats).")
-        elif inp[0] == "cp" and len(inp) != 1 or len(inp) != 2:
-            raise ValueError("Incorrect number of arguments given")
         else:
-            try:
-                dur = float(input("duration (seconds): "))
-            except ValueError as e:
-                print(e, "Input must be a float.")
-                continue
-            try:
-                dt = float(input("dt (resolution of the simulation): "))
-            except ValueError as e:
-                print(e, "Input must be a float.")
-                continue
+            print("\"cp\" or \"calculate points\" must be followed by 2 float numbers.")
         ani.reset()
         ani.createPoints(dur, dt)
     elif inp == "animate":
@@ -58,8 +47,7 @@ while inp != "quit":
         print(
             "calculate points [float float]:\n" +
             "  Builds a set of points that each body traces.\n" +
-            "  Can give 2 arguments along with command to set duration (length of time of the simulation) and dt (resolution in time of the simulation).\n" +
-            "  Will be asked for duration, dt if not previously entered as arguments.\n" +
+            "  Can give 2 arguments along with command to set duration (length of time of the simulation) and dt (resolution in time of the simulation).\n"
             "  Rerun to set new duration and dt.\n" +
             "animate:\n" +
             "  Requires you to run calculate points first as animations use data generated from it.\n" +
